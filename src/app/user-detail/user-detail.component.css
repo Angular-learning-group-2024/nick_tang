@@ -1,0 +1,20 @@
+.detail {
+    padding-left: 10px;
+    line-height: 30px;
+}
+.detail > div {
+    border-bottom: #e5e5e5 1px solid;
+}
+.detail > div > div:nth-of-type(2) {
+    border-left: #e5e5e5 1px solid;
+}
+.detail > div > div:nth-of-type(2)::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+}
+a:hover {
+    color: red;
+    /* 悬停时的字体颜色 */
+    text-decoration: underline;
+}

@@ -1,0 +1,69 @@
+<!-- login.component.html -->
+<div class="login-container">
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <nz-divider nzText="Angular Hands-on Project"></nz-divider>
+        <div class="demo-account">Demo Email: nick_tang&#64;epam.com  Password: 123</div>
+        <div class="login-form">
+            <div>
+                <span nz-icon nzType="mail" nzTheme="outline"></span>
+                <label for="email">Email: </label>
+                <input id="email" type="text" formControlName="email">
+
+                <span class="mail-error">
+                    <span *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger">
+                        <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                        <span *ngIf="email?.errors?.['invalidEmail']">Invalid email format.</span>
+                    </span>
+                </span>
+            </div>
+            <div>
+                <span nz-icon nzType="lock" nzTheme="outline"></span>
+                <label for="password">Password: </label>
+                <input id="password" type="password" formControlName="password">
+                <span class="mail-error">
+                    <span *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+                        class="alert alert-danger">
+                        <span *ngIf="password?.errors?.['required']">Password is required.</span>
+                    </span>
+                </span>
+            </div>
+            <div>
+                <input type="submit" value="Login" style="margin-left: 180px;" [disabled]="!loginForm.valid"/><span class="login-submit"></span>
+            </div>
+        </div>
+    </form>
+    <!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          ngModel
+          required
+          #email="ngModel"
+          autocomplete="username"
+        >
+        <div *ngIf="email.invalid && email.touched">需要一个有效的电子邮件地址</div>
+      </div>
+      
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          required
+          minlength="8"
+          #password="ngModel"
+          autocomplete="current-password"
+        >
+        <div *ngIf="password.invalid && password.touched">密码至少需要8个字符</div>
+      </div>
+      
+      <button type="submit" [disabled]="!loginForm.valid">登录</button>
+    </form> -->
+</div>

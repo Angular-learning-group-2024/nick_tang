@@ -1,0 +1,52 @@
+:host {
+    text-align: center;
+}
+
+nz-header,
+nz-footer {
+    background: #070707;
+    color: #fff;
+    
+    height: 64px;
+}
+
+nz-footer {
+    line-height: 1.5;
+}
+
+nz-sider {
+    background: #fff;
+    color: #000000;
+    line-height: 120px;
+
+    height: calc(100vh - 64px); 
+}
+
+nz-content {
+    background: rgb(248, 247, 247);
+    color: #000;
+    /* min-height: 120px; */
+    /* line-height: 120px; */
+    height: calc(100vh - 64px); 
+    text-align: left;
+}
+
+nz-layout {
+    margin-bottom: 48px;
+
+    height: 100vh;  /* 视口的100%高度 */
+    overflow: hidden; /* 防止内容溢出引起滚动 */
+}
+
+nz-layout nz-layout,
+nz-layout:last-child {
+    margin: 0;
+}
+.admin-title {
+    text-align: left;
+    color: #fff;
+}
+
+.logout {
+    border-radius: 5px;
+}

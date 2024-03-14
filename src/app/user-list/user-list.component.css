@@ -1,0 +1,35 @@
+a {
+    /* 默认的字体颜色 */
+    text-decoration: none;
+    /* 移除下划线 */
+    transition: color 0.3s;
+    /* 平滑的颜色过渡 */
+}
+
+/* 鼠标悬停上去的超链接样式 */
+a:hover {
+    color: red;
+    /* 悬停时的字体颜色 */
+    text-decoration: underline;
+}
+
+.search {
+    padding: 10px;
+    height: 50px;
+    text-align: left
+}
+
+.search input {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+nz-input-group {
+    width: 300px;
+}
+
+/* table-container.component.css */
+.table-container {
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+}

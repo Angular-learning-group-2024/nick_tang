@@ -1,0 +1,35 @@
+<nz-layout>
+    <nz-header>
+        <div nz-row>
+            <div nz-col nzSpan="12" class="admin-title">Learn Angular</div>
+            <div nz-col nzSpan="10"></div>
+            <div nz-col nzSpan="2">
+                <!-- <a routerLink="/login">退出登陆</a> -->
+                <button nz-button nzType="primary" class="logout" (click)="logout()">退出登陆</button>
+            </div>
+        </div>
+    </nz-header>
+    <nz-layout>
+        <nz-sider nzCollapsible>
+            <ul nz-menu nzMode="inline" class="sider-menu">
+                <li nz-submenu nzOpen nzIcon="user" nzTitle="用户管理">
+                  <ul>
+                    <li nz-menu-item nzSelected><a routerLink="/admin/user-list">用户列表</a></li>
+                    <li nz-menu-item><a routerLink="/admin/add-user">添加用户</a></li>
+                  </ul>
+                </li>
+                <li nz-submenu nzTitle="其它" nzIcon="laptop">
+                  <ul>
+                    <li nz-menu-item>Todo1</li>
+                    <li nz-menu-item>Todo2</li>
+                    <li nz-menu-item>Todo3</li>
+                    <li nz-menu-item>Todo4</li>
+                  </ul>
+                </li>
+              </ul>
+        </nz-sider>
+        <nz-content>
+            <router-outlet></router-outlet>
+        </nz-content>
+    </nz-layout>
+</nz-layout>

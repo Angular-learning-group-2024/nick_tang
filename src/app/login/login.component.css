@@ -1,0 +1,63 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+.login-form label {
+    width: 100px; 
+    display: inline-block;
+    text-align: right;
+    margin-right: 2px; 
+}
+.login-form div {
+    margin-top: 20px;
+}
+.login-form input[type="text"], input[type="password"]  {
+    border-radius: 7px; /* 设置边框圆角大小 */
+    border: 1px solid #ccc; /* 可选，设置边框样式 */
+    padding: 10px; /* 可选，填充空间以增大输入区域 */
+    width: 200px; /* 可选，设置输入框宽度 */
+}
+.login-form input[type="submit"]:disabled {
+    border-radius: 7px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    width: 100px; 
+    background-color: #ccc;
+} 
+.login-form input[type="submit"]:not(:disabled) {
+    border-radius: 7px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    width: 100px; 
+    background-color: #ccc;
+    background-color: #0056b3;
+    color: white; 
+    cursor: pointer;
+}
+.mail-error {
+    width: 200px;
+    display: inline-block;
+    margin-left: 10px;
+    color: #f00;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: bisque;
+}
+.mail-error > span {
+    margin-left: 5px;
+}
+.login-submit {
+    width: 300px;
+    display: inline-block;
+    color: #ccc;
+    padding-left: 10px;
+}
+.demo-account {
+    width: 400px;
+    color: #ccc;
+    margin: auto;
+}

@@ -1,0 +1,58 @@
+
+<div nz-row class="search">
+    <div nz-col nzSpan="12">
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" [(ngModel)]="filterValue" nz-input placeholder="输入用户名搜索" />
+        </nz-input-group>
+        <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch (click)="onSearch()"><span nz-icon nzType="search"></span></button>
+        </ng-template>
+    </div>
+    <div nz-col nzSpan="12"></div>
+</div>
+<div class="table-container">
+  <!-- [nzScroll]="{ x: '100%', y: '100%' }" -->
+  <!-- [nzScroll]="scrollConfig" -->
+<nz-table
+      nzShowSizeChanger
+      #virtualTable
+      [nzData]="listOfRandomUser"
+      [nzFrontPagination]="false"
+      [nzLoading]="loading"
+      [nzTotal]="total"
+      [nzPageSize]="pageSize"
+      [nzPageIndex]="pageIndex"
+      (nzQueryParams)="onQueryParamsChange($event)"
+      [nzScroll]="{ x: '100%', y: '100%' }"
+    >
+      <thead>
+        <tr>
+          <th nzColumnKey="id" >用户ID</th>
+          <th nzColumnKey="name" >名称</th>
+          <th nzColumnKey="registrationDate" >注册日期</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of listOfRandomUser">
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.registrationDate }}</td>
+          <td nzCellControl="action">
+            <a [routerLink]="['/admin/user-detail', data.id]">View</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a [routerLink]="['/admin/edit-detail', data.id]">Edit</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a
+                nz-popconfirm
+                nzPopconfirmTitle="确认删除该用户?"
+                nzPopconfirmPlacement="bottom"
+                (nzOnConfirm)="deleteUser(data.id)"
+                >
+            Delete
+            </a>          
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+</div>    

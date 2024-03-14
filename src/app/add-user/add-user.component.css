@@ -1,0 +1,29 @@
+.add {
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.add>div {
+    border-bottom: #e5e5e5 1px solid;
+    align-items: center;
+}
+
+.add>div>div:nth-of-type(2) {
+    border-left: #e5e5e5 1px solid;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+/* .add > div > div:nth-of-type(2)::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+} */
+a:hover {
+    color: red;
+    /* 悬停时的字体颜色 */
+    text-decoration: underline;
+}
+nz-date-picker {
+    width: 100%;
+}

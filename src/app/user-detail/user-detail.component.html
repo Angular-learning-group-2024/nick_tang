@@ -1,0 +1,22 @@
+<div *ngIf="user" class="detail">
+    <div nz-row>
+        <div nz-col nzSpan="24"><b>用户管理 -&gt; 用户详情</b></div>
+    </div>
+    <div nz-row>
+        <div nz-col nzSpan="2">用户名：</div>
+        <div nz-col nzSpan="22">{{user?.name}}</div>
+    </div>
+    <div nz-row>
+        <div nz-col nzSpan="2">注册日期：</div>
+        <div nz-col nzSpan="22">{{user?.registrationDate}}</div>
+    </div>
+    <div nz-row>
+        <div nz-col nzSpan="2">个性签名：</div>
+        <div nz-col nzSpan="22">{{user?.signature}}</div>
+    </div>
+    <div>
+        <div nz-col nzSpan="24">
+            <a routerLink="/admin/user-list">返回</a>
+        </div>
+    </div>
+</div>
